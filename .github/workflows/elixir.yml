@@ -65,4 +65,9 @@ jobs:
       run: mix dialyzer --no-check
 
     - name: Run tests
-      run: mix test
+      run: mix coveralls.json
+
+    - uses: codecov/codecov-action@v2
+      with:
+        files: ./cover/excoveralls.json
+        fail_ci_if_error: true
