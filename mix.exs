@@ -10,18 +10,7 @@ defmodule NameOfTheDay.MixProject do
       compilers: [:gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps(),
-      test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: [
-        coveralls: :test,
-        "coveralls.detail": :test,
-        "coveralls.post": :test,
-        "coveralls.html": :test,
-        "coveralls.github": :test
-      ],
-      dialyzer: [
-        plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
-      ]
+      deps: deps()
     ]
   end
 
@@ -44,8 +33,7 @@ defmodule NameOfTheDay.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:bcrypt_elixir, "~> 2.0"},
-      {:phoenix, "~> 1.6.0-rc.0", override: true},
+      {:phoenix, "~> 1.6.0"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"},
@@ -60,12 +48,7 @@ defmodule NameOfTheDay.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
-      {:dialyxir, "~> 1.1", only: [:dev, :test], runtime: false},
-      {:excoveralls,
-       git: "https://github.com/joaothallis/excoveralls",
-       branch: "support-elixir-1.13",
-       only: :test}
+      {:plug_cowboy, "~> 2.5"}
     ]
   end
 

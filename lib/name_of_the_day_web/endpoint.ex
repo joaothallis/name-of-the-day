@@ -7,7 +7,7 @@ defmodule NameOfTheDayWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_name_of_the_day_key",
-    signing_salt: "H5Lwl5WV"
+    signing_salt: "HPywM2rj"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]

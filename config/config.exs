@@ -13,10 +13,9 @@ config :name_of_the_day,
 # Configures the endpoint
 config :name_of_the_day, NameOfTheDayWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "lMYEo5GBEfT5yaKSTcOfAl5orV7RIX/9kGplBiHD3N47wFKZI7GI0dP2Q1o/mY5y",
   render_errors: [view: NameOfTheDayWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: NameOfTheDay.PubSub,
-  live_view: [signing_salt: "pW0qTAsz"]
+  live_view: [signing_salt: "hjkLlVh3"]
 
 # Configures the mailer
 #

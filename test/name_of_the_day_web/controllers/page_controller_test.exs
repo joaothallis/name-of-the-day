@@ -1,5 +1,5 @@
 defmodule NameOfTheDayWeb.PageControllerTest do
-  use NameOfTheDayWeb.ConnCase, async: true
+  use NameOfTheDayWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

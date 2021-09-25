@@ -1,8 +1,5 @@
 import Config
 
-# Only in tests, remove the complexity from the password hashing algorithm
-config :bcrypt_elixir, :log_rounds, 1
-
 # Configure your database
 #
 # The MIX_TEST_PARTITION environment variable can be used
@@ -20,6 +17,7 @@ config :name_of_the_day, NameOfTheDay.Repo,
 # you can enable the server option below.
 config :name_of_the_day, NameOfTheDayWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
+  secret_key_base: "YWNqr/SAqnu5XgRRxVqMgHTZP9sxTKuJxwtk8qaRMbc6C0WioRX/lMPsSXntVG3g",
   server: false
 
 # In test we don't send emails.
