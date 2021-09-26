@@ -74,6 +74,7 @@ defmodule NameOfTheDayWeb.Router do
   scope "/", NameOfTheDayWeb do
     pipe_through [:browser, :require_authenticated_user]
 
+    resources "/names", NameController
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings", UserSettingsController, :update
     get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
