@@ -71,10 +71,7 @@ defmodule NameOfTheDayWeb.UserAuthTest do
       |> put_session(:live_socket_id, live_socket_id)
       |> UserAuth.log_out_user()
 
-      assert_receive %Phoenix.Socket.Broadcast{
-        event: "disconnect",
-        topic: "users_sessions:abcdef-token"
-      }
+      assert_receive %Phoenix.Socket.Broadcast{event: "disconnect", topic: ^live_socket_id}
     end
 
     test "works even if user is already logged out", %{conn: conn} do
