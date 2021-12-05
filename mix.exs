@@ -62,10 +62,7 @@ defmodule NameOfTheDay.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:dialyxir, "~> 1.1", only: [:dev, :test], runtime: false},
-      {:excoveralls,
-       git: "https://github.com/joaothallis/excoveralls",
-       branch: "support-elixir-1.13",
-       only: :test}
+      {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 
