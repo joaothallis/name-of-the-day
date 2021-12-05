@@ -43,7 +43,7 @@ jobs:
       run: mix format --check-formatted
 
     - name: Check warnings
-      run: mix compile --warnings-as-errors
+      run: mix compile
 
     - name: Check dependencies do not slowly creep into the codebase
       run: mix xref graph --label compile-connected --fail-above 0
